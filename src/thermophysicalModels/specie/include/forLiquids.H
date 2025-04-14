@@ -31,7 +31,6 @@ License
 #include "adiabaticPerfectFluid.H"
 #include "rhoConst.H"
 #include "rPolynomial.H"
-#include "TaitTamman.H"
 
 #include "eConstThermo.H"
 #include "hConstThermo.H"
@@ -50,8 +49,7 @@ License
 #define forLiquidEqns(Mu, He, Cp, Macro, Args...)                              \
     forThermo(Mu, He, Cp, adiabaticPerfectFluid, specie, Macro, Args);         \
     forThermo(Mu, He, Cp, rhoConst, specie, Macro, Args);                      \
-    forThermo(Mu, He, Cp, rPolynomial, specie, Macro, Args)                      \
-    forThermo(Mu, He, Cp, TaitTamman, specie, Macro, Args)
+    forThermo(Mu, He, Cp, rPolynomial, specie, Macro, Args)
 
 #define forLiquidEnergiesAndThermos(Mu, Macro, Args...)                        \
     forLiquidEqns(Mu, sensibleEnthalpy, hConstThermo, Macro, Args);            \

@@ -47,7 +47,6 @@ transport
     sutherland
     tabulated
     WLF
-    modifiedWLF
     Andrade
 );
 
@@ -80,7 +79,6 @@ equationOfState
     rhoConst
     rhoTabulated
     rPolynomial
-    TaitTamman
 );
 
 specie
